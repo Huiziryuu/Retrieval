@@ -19,7 +19,7 @@ class leXicalDic:
 def composeDic(dic, filePath):
     # check file existence - exist
     if os.path.exists(filePath):
-        # todo: to get file encode automatically
+
         f = open(filePath,'r', encoding="latin1")
         for i in f:
             word, freq = i.split()
@@ -59,6 +59,12 @@ def quickSortHelper(alist, first, last):
 ''' to find the partition point for each sort loop
 '''
 def partition(alist, first, last):
+
+    # get a median value as pivo point
+    medianP = (first + last) // 2
+    pivopoint = sorted([(first, alist[first][1]), (medianP, alist[medianP][1]), (last, alist[last][1])],\
+                       key=lambda x:x[1])[1][0]
+    alist[first], alist[pivopoint] = alist[pivopoint], alist[first]
     pivovalue = alist[first][1]
 
     leftmark = first
