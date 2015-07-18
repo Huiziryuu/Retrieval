@@ -1,8 +1,9 @@
 __author__ = 'liuhui'
 
-import Stack
-import BinaryTree
 import operator
+
+from DataStructureEx import BinaryTree, Stack
+
 
 def buildParseTree(fpexp):
     fplist = fpexp.split()
