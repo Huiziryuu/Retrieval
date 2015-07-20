@@ -1,5 +1,15 @@
 __author__ = 'liuhui'
 
+'''
+The coding is not totally original work.
+
+Part of the data structure, algorithm is referred from the online tutorial
+ <Problem Solving with Algorithms and Data Structures>
+ http://interactivepython.org/runestone/static/pythonds/index.html
+
+ Very good material, highly recommend it.
+'''
+
 import os
 import sys
 
@@ -109,7 +119,6 @@ def main():
             print(">> File doesn't exist, please verify <<")
             exitPrompt = "Or input 'No' to terminate this programme"
 
-    exitPrompt = ""
     # struct hash map
     dic = leXicalDic()
     composeDic(dic, filePath)
